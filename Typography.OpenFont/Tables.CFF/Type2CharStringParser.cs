@@ -57,7 +57,7 @@ namespace Typography.OpenFont.CFF
 
             ///This number is interpreted as a Fixed; that is, a signed number with 16 bits of fraction
             float int_part = (short)((b0 << 8) | b1);
-            float fraction_part = (short)((b2 << 8) | b3) / (float)(1 << 16);
+            float fraction_part = ((b2 << 8) | b3) / (float)(1 << 16);
             return int_part + fraction_part;
         }
 
